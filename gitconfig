@@ -1,6 +1,7 @@
 [user]
-	name = "Pengxiang-Huang"
-	email = "huangpengxiang70@gmail"
+	name = "Pengxiang Huang"
+  username = "Pengxiang-Huang"
+	email = "huangpengxiang70@gmail.com"
 
 [init]
 	defaultBranch = main
