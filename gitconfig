@@ -1,0 +1,51 @@
+[user]
+	name = "Pengxiang Huang"
+	email = "huangpengxiang70@gmail"
+	username = "Pengxiang-Huang"
+
+[init]
+	defaultBranch = main
+
+[core]
+	editor = nvim
+
+[web]
+	browser = google-chrome
+[color]
+	ui = auto
+
+[color "branch"]
+	current = yellow bold
+	local = green bold
+	remote = cyan bold
+
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+
+[color "status"]
+	added = green bold
+	changed = yellow bold
+	untracked = red bold
+
+[diff]
+	tool = vimdiff
+
+[difftool]
+	prompt = false
+
+[alias]
+  # commit 
+	cm = commit -m
+	
+  # diff 
+	df = diff
+  dfname = diff --name-only
+
+  # status
+  sts = status -s 
+
+
