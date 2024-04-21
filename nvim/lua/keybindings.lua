@@ -76,6 +76,8 @@ map("i", "jj", "<ESC>", opt)
 -- map o insert a line below in n mode '
 map("n", "o", "o<ESC>", opt)
 map("n", "O", "O<ECS>", opt)
+-- redo 
+map("n", "r", "<C-r>", opt)
 
 --- Plugins Related Configurations
 
@@ -89,14 +91,14 @@ map("n", "<leader><S-Left>", ":BufferLineCyclePrev<CR>", opt)
 map("n", "<leader><S-Right>", ":BufferLineCycleNext<CR>", opt)
 
 -- close the tab
-map("n", "<leader>bc", ":Bdelete!<CR>", opt)
+map("n", "<leader>ww", ":Bdelete!<CR>", opt)
 
 -- close left or right buffer
-map("n", "<leader>bh", ":BufferLineCloseLeft<CR>", opt)
-map("n", "<leader>bl", ":BufferLineCloseRight<CR>", opt)
+map("n", "<leader>wh", ":BufferLineCloseLeft<CR>", opt)
+map("n", "<leader>wl", ":BufferLineCloseRight<CR>", opt)
 
 -- close others
-map("n", "<leader>bo", ":BufferLineCloseRight<CR>:BufferLineCloseLeft<CR>", opt)
+map("n", "<leader>wo", ":BufferLineCloseRight<CR>:BufferLineCloseLeft<CR>", opt)
 
 
 
