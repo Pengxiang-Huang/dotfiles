@@ -55,5 +55,18 @@ require("lazy").setup {
 	-- formatter
 	{ "nvim-lua/plenary.nvim" },
 	{ "jose-elias-alvarez/null-ls.nvim" }, 
+	
+	-- smooth scroll 
+	{ "karb94/neoscroll.nvim" },
+	
+	-- auto pairs
+	{ "windwp/nvim-autopairs" }, 
+
+	-- fuzzy finder
+	{ "nvim-lua/plenary.nvim" },
+	{ "nvim-telescope/telescope.nvim" },
+
+	-- dashboard 
+	{ "goolord/alpha-nvim" },
 }
 

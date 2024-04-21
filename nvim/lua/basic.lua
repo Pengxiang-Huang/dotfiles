@@ -11,6 +11,9 @@ vim.bo.autoread = true
 -- set the scrolloff to 8
 vim.o.scrolloff = 6
 
+-- hightlight current line 
+vim.o.cursorline = true
+
 -- disable the annoying sound on errors
 vim.o.errorbells = false
 

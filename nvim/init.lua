@@ -10,6 +10,7 @@ require('colorscheme')
 
 require('file-tree')
 
+-- to fancy..
 require('highlight')
 
 require('buffer')
@@ -24,5 +25,12 @@ require('lsp.cmp')
 
 require('indent')
 
+require('scroll')
+
+require('pair')
+
+require('file-fuzzy')
+
+require('dashboard')
 -- not used 
 -- require('format')

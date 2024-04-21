@@ -23,11 +23,18 @@ local map = vim.api.nvim_set_keymap
 map("n", "<leader>w", ":w<CR>", opt)
 map("n", "<leader>wq", ":wqa!<CR>", opt)
 
+-- quit windows
+map("n", "<leader>qq", ":qa!<CR>", opt)
+
 -- jump 5 lines 
 map("n", "<C-j>", "5j", opt)
 map("n", "<C-k>", "5k", opt)
 map("v", "<C-j>", "5j", opt)
 map("v", "<C-k>", "5k", opt)
+
+-- map shift left and right
+map("n", "<S-Left>", "b", opt)
+map("n", "<S-Right>", "w", opt)
 
 -- indent the code in v mode 
 map("v", "<", "<gv", opt)
@@ -78,7 +85,7 @@ map("n", "<leader>ft",  ":NvimTreeToggle<CR>", opt)
 pluginKeys.nvimTreeList = {
   
 	-- open file or folder 
-  -- { key = {"<CR>", "o", "<2-LeftMouse>"}, action = "edit" },
+  { key = {"<CR>", "o", "<2-LeftMouse>"}, action = "edit" },
   
 	-- open and split 
   { key = "v", action = "vsplit" },
@@ -99,8 +106,8 @@ pluginKeys.nvimTreeList = {
 }
 
 -- switch tab
-map("n", "<leader>{", ":BufferLineCyclePrev<CR>", opt)
-map("n", "<leader>}", ":BufferLineCycleNext<CR>", opt)
+map("n", "<leader><S-Left>", ":BufferLineCyclePrev<CR>", opt)
+map("n", "<leader><S-Right>", ":BufferLineCycleNext<CR>", opt)
 
 -- close the tab
 map("n", "<leader>bc", ":Bdelete!<CR>", opt)
@@ -142,6 +149,12 @@ pluginKeys.cmp = function(cmp)
     }
 end
 
+-- Telescope
+-- find in current folder
+map("n", "<leader>ff", ":Telescope find_files<CR>", opt)
+
+-- global search 
+map("n", "<leader>f/", ":Telescope live_grep<CR>", opt)
 
 
 return pluginKeys
