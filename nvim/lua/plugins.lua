@@ -28,7 +28,8 @@ require("lazy").setup {
 	-- themes
 	{ "ful1e5/onedark.nvim" },
 	{ "marko-cerovac/material.nvim" },
-	
+  { "sainnhe/edge"},
+
 	-- highlighting
 	{ "nvim-treesitter/nvim-treesitter" },
 

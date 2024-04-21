@@ -17,7 +17,7 @@ cmp.setup({
       -- require'snippy'.expand_snippet(args.body)
     end,
   },
-  -- 补全源
+  -- sources 
   sources = cmp.config.sources({
     { name = "nvim_lsp" },
     -- For vsnip users.
@@ -37,7 +37,6 @@ cmp.setup({
   mapping = require("keybindings").cmp(cmp),
 })
 
--- / 查找模式使用 buffer 源
 cmp.setup.cmdline("/", {
   mapping = cmp.mapping.preset.cmdline(),
   sources = {
@@ -45,7 +44,6 @@ cmp.setup.cmdline("/", {
   },
 })
 
--- : 命令行模式中使用 path 和 cmdline 源.
 cmp.setup.cmdline(":", {
   mapping = cmp.mapping.preset.cmdline(),
   sources = cmp.config.sources({

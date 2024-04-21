@@ -46,7 +46,7 @@ map("v", "J", ":move '>+1<CR>gv-gv", opt)
 map("v", "K", ":move '<-2<CR>gv-gv", opt)
 
 -- insert mode jump to the begin or end of the line
--- map("i", "<S-Delete>", "<C-w>", opt) -- not working due to the match of the delete key 
+-- map("i", "<S-BS>", "<C-w>", opt) -- not working due to the match of the delete key 
 map("i", "<C-h>", "<ESC>I", opt)
 map("i", "<C-l>", "<ESC>A", opt)
 
@@ -73,6 +73,9 @@ map("n", "<leader><tab>", "<C-w>w", opt)
 -- map the jj to jump back to the normal mode
 map("i", "jj", "<ESC>", opt)
 
+-- map o insert a line below in n mode '
+map("n", "o", "o<ESC>", opt)
+map("n", "O", "O<ECS>", opt)
 
 --- Plugins Related Configurations
 

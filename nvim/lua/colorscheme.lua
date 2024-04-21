@@ -1,8 +1,9 @@
 vim.o.background = "dark"
--- onedark
-local colorscheme = "onedark"
 
-local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
+-- local colorscheme
+local color = "edge"
+
+local status_ok, _ = pcall(vim.cmd, "colorscheme " .. color)
 
 if not status_ok then
   vim.notify("colorscheme: " .. colorscheme .. " Not Found!")
