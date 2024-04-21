@@ -78,32 +78,8 @@ map("i", "jj", "<ESC>", opt)
 
 local pluginKeys = {}
 
--- nvim-tree
-map("n", "<leader>ft",  ":NvimTreeToggle<CR>", opt)
-
--- file tree shortcuts
-pluginKeys.nvimTreeList = {
-  
-	-- open file or folder 
-  { key = {"<CR>", "o", "<2-LeftMouse>"}, action = "edit" },
-  
-	-- open and split 
-  { key = "v", action = "vsplit" },
-  { key = "h", action = "split" },
-  
-	-- show dotfiles 
-  { key = ".", action = "toggle_dotfiles" }, -- Hide (dotfiles)
-  
-	-- file operations
-  { key = "<F5>", action = "refresh" },
-  { key = "a", action = "create" },
-  { key = "d", action = "remove" },
-  { key = "r", action = "rename" },
-  { key = "x", action = "cut" },
-  { key = "c", action = "copy" },
-  { key = "p", action = "paste" },
-  { key = "s", action = "system_open" },
-}
+-- neo tree 
+map("n", "<leader>ft",  ":Neotree toggle<CR>", opt)
 
 -- switch tab
 map("n", "<leader><S-Left>", ":BufferLineCyclePrev<CR>", opt)

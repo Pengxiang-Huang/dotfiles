@@ -12,10 +12,16 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup {
-	-- nvim tree
-	{ "kyazdani42/nvim-web-devicons" },
-	{ "nvim-tree/nvim-tree.lua" },
-	
+	-- nvim-neo-tree
+	{
+    "nvim-neo-tree/neo-tree.nvim",
+    branch = "v3.x",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+      "MunifTanjim/nui.nvim",
+    }
+	},	
 	-- status line
 	{ "nvim-lualine/lualine.nvim" }, 
 	
@@ -51,6 +57,14 @@ require("lazy").setup {
 
 	-- indentation
 	{ "lukas-reineke/indent-blankline.nvim" },
+	
+	-- comments
+	{
+    'numToStr/Comment.nvim',
+    opts = {
+    },
+    lazy = false,
+	},
 
 	-- formatter
 	{ "nvim-lua/plenary.nvim" },

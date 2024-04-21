@@ -25,6 +25,8 @@ require('lsp.cmp')
 
 require('indent')
 
+require('comment-tool')
+
 require('scroll')
 
 require('pair')
