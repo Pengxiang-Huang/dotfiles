@@ -75,9 +75,9 @@ map("i", "jj", "<ESC>", opt)
 
 -- map o insert a line below in n mode '
 map("n", "o", "o<ESC>", opt)
-map("n", "O", "O<ECS>", opt)
+map("n", "O", "O<ESC>", opt)
 -- redo 
-map("n", "r", "<C-r>", opt)
+map("n", "<leader>r", "<C-r>", opt)
 
 --- Plugins Related Configurations
 

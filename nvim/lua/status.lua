@@ -8,7 +8,7 @@ lualine.setup({
   options = {
     component_separators = { left = "|", right = "|" },
     section_separators = { left = " ", right = "" },
-		theme = 'onedark',
+		theme = 'edge',
   },
   extensions = { "nvim-tree", "toggleterm" },
   sections = {

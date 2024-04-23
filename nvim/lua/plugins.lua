@@ -1,3 +1,4 @@
+-- use lazynvim to manage the plugins
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
@@ -27,8 +28,9 @@ require("lazy").setup {
 	
 	-- themes
 	{ "ful1e5/onedark.nvim" },
-	{ "marko-cerovac/material.nvim" },
   { "sainnhe/edge"},
+	{ "Mofiqul/vscode.nvim"},
+	{ "sainnhe/sonokai" },
 
 	-- highlighting
 	{ "nvim-treesitter/nvim-treesitter" },
@@ -59,6 +61,10 @@ require("lazy").setup {
 	-- indentation
 	{ "lukas-reineke/indent-blankline.nvim" },
 	
+
+	-- highlighting cursor word 
+	{ "rrethy/vim-illuminate" },
+
 	-- comments
 	{
     'numToStr/Comment.nvim',
@@ -76,6 +82,8 @@ require("lazy").setup {
 	
 	-- auto pairs
 	{ "windwp/nvim-autopairs" }, 
+	
+	{ "Pocco81/auto-save.nvim" },
 
 	-- fuzzy finder
 	{ "nvim-lua/plenary.nvim" },

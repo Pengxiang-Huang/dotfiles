@@ -41,7 +41,7 @@ vim.o.incsearch = true
 vim.o.cmdheight = 2
 
 -- enable mouse at all 
-vim.o.mouse = "a"
+vim.o.mouse = "vi"
 
 -- set the timeout line to 500 ms
 vim.o.timeoutlen = 500
