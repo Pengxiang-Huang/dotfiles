@@ -37,7 +37,6 @@ require("lazy").setup {
 
 	-- buffer
 	{ "akinsho/bufferline.nvim" },
-	{ "kyazdani42/nvim-web-devicons" },
 	{ "moll/vim-bbye" },
 
 	-- which key 
