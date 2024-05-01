@@ -83,6 +83,13 @@ map("n", "<leader>r", "<C-r>", opt)
 -- map the clear the highlight search
 map("n", "<leader>cs", ":noh<CR>", opt)
 
+-- copy a single line to the system clipboard
+map("n", "<leader>cl", ":yy<CR>", opt)
+
+-- copy the entire file to the system clipboard 
+map("n", "<leader>cf", ":%y+<CR>", opt)
+
+
 --- Plugins Related Configurations
 
 local pluginKeys = {}
