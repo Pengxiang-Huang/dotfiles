@@ -41,7 +41,7 @@ vim.opt.relativenumber = false
 vim.o.incsearch = true
 
 -- set command line height to 2
-vim.o.cmdheight = 2
+vim.o.cmdheight = 1
 
 -- enable mouse at all 
 vim.o.mouse = "vi"

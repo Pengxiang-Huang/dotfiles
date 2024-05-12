@@ -138,11 +138,12 @@ pluginKeys.cmp = function(cmp)
         ["<Down>"] = cmp.mapping.select_next_item(),
 				
         -- tab to confirm 
-        ["<Tab>"] = cmp.mapping.confirm({
+        ["<CR>"] = cmp.mapping.confirm({
             select = true,
             behavior = cmp.ConfirmBehavior.Replace
         }),
 				
+        ["<Tab>"] = cmp.mapping.select_next_item(),
 			
         -- scorll if too many 
         ["<C-u>"] = cmp.mapping(cmp.mapping.scroll_docs(-4), {"i", "c"}),
