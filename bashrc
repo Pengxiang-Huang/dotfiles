@@ -11,3 +11,7 @@ alias v='nvim'
 alias nl="nvim -c':e#<1'"
 alias nold='nvim -c "Telescope oldfiles"'
 alias pd="popd &> /dev/null"
+# alias information for the local machine
+# alias ssh_p="ssh tht5102@peroni.cs.northwestern.edu"
+# alias ssh_to_scratch='ssh -t tht5102@peroni.cs.northwestern.edu "cd /nfs-scratch/tht5102 ; bash --login"'
+# alias ssh_l="ssh penn@penn-OMEN.local"
