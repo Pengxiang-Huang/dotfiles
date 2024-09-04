@@ -76,9 +76,12 @@ map("i", "jj", "<ESC>", opt)
 -- map o insert a line below in n mode '
 map("n", "o", "o<ESC>", opt)
 map("n", "O", "O<ESC>", opt)
+
 -- redo 
 map("n", "<leader>r", "<C-r>", opt)
 
+-- map the insert char in normal mode 
+map("n", "<leader>a", ":execute 'normal! a' . getcharstr()<CR>", opt)
 
 -- map the clear the highlight search
 map("n", "<leader>cs", ":noh<CR>", opt)
