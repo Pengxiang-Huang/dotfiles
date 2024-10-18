@@ -36,6 +36,10 @@ map("v", "<C-k>", "5k", opt)
 map("n", "<S-Left>", "b", opt)
 map("n", "<S-Right>", "w", opt)
 
+-- map the H and L 
+map("n", "H", "0", opt)
+map("n", "L", "$", opt)
+
 -- indent the code in v mode 
 map("v", "<", "<gv", opt)
 map("v", ">", ">gv", opt)
