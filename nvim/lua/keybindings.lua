@@ -168,4 +168,7 @@ map("n", "<leader>f/", ":Telescope live_grep<CR>", opt)
 -- find methods/functions/symbols
 map("n", "<leader>fs", ":Telescope lsp_document_symbols<CR>", opt)
 
+-- find buffer 
+map("n", "<leader>fb", ":Telescope current_buffer_fuzzy_find<CR>", opt)
+
 return pluginKeys
