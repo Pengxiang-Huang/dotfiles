@@ -11,7 +11,7 @@ vim.bo.autoread = true
 -- set the scrolloff to 8
 vim.o.scrolloff = 6
 
--- hightlight current line 
+-- highlight current line 
 vim.o.cursorline = true
 
 -- disable the annoying sound on errors
@@ -56,3 +56,16 @@ vim.o.showtabline = 2
 vim.o.autoindent = true
 vim.bo.autoindent = true
 vim.o.smartindent = true
+
+-- set to OSC 52 so can be copied via ssh 
+vim.g.clipboard = {
+	name = 'OSC 52',
+	copy = {
+		['+'] = require('vim.ui.clipboard.osc52').copy('+'),
+		['*'] = require('vim.ui.clipboard.osc52').copy('*'),
+	},
+	paste = {
+		['+'] = require('vim.ui.clipboard.osc52').paste('+'),
+		['*'] = require('vim.ui.clipboard.osc52').paste('*'),
+	},
+}

@@ -9,7 +9,7 @@ require("mason").setup({
 })
 
 require('mason-lspconfig').setup({
-    ensure_installed = { 'clangd', 'pylsp', 'lua_ls', 'rust_analyzer' },
+    ensure_installed = { 'clangd', 'pylsp', 'lua_ls', 'rust_analyzer', 'typos_lsp' },
 })
 
 local lspconfig = require('lspconfig')
@@ -61,5 +61,10 @@ lspconfig.pylsp.setup({
 
 lspconfig.rust_analyzer.setup({
 	on_attach = on_attach,
+})
+
+lspconfig.typos_lsp.setup({
+ -- Logging level of the language server. Logs appear in :LspLog. Defaults to error.
+	cmd_env = { RUST_LOG = "error" },
 })
 
