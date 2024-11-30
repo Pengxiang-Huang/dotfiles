@@ -171,4 +171,10 @@ map("n", "<leader>fs", ":Telescope lsp_document_symbols<CR>", opt)
 -- find buffer 
 map("n", "<leader>fb", ":Telescope current_buffer_fuzzy_find<CR>", opt)
 
+-- map the terminal 
+map("n", "<leader>tt", ":ToggleTerm direction=float<CR>", opt)
+
+-- map the esc for the terminal 
+map("t", "<ESC>", "<C-\\><C-n>", opt)
+
 return pluginKeys

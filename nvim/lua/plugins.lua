@@ -90,5 +90,12 @@ require("lazy").setup {
 
 	-- dashboard 
 	{ "goolord/alpha-nvim" },
+
+	--- terminal 
+	{'akinsho/toggleterm.nvim',
+		version = "*",
+		config = true 
+	}
+	
 }
 
