@@ -1,10 +1,13 @@
 require('neoscroll').setup({
-    -- Set any options as needed
 })
 
-local t = {}
--- Syntax: t[keys] = {function, {function arguments}}
-t['<S-Up>'] = {'scroll', {'-vim.wo.scroll', 'true', '350'}}
-t['<S-Down>'] = {'scroll', { 'vim.wo.scroll', 'true', '350'}}
-
-require('neoscroll.config').set_mappings(t)
+-- local keymap 
+neoscroll = require('neoscroll')
+local keymap = {
+  ["<S-Up>"] = function() neoscroll.ctrl_u({ duration = 450 }) end;
+  ["<S-Down>"] = function() neoscroll.ctrl_d({ duration = 450 }) end;
+}
+local modes = { 'n', 'i', 'v', 'x' }
+for key, func in pairs(keymap) do
+  vim.keymap.set(modes, key, func)
+end

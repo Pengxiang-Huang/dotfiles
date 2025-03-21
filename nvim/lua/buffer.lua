@@ -4,7 +4,7 @@ if not status then
   return
 end
 
--- bufferline
+-- bufferline, currently has bug in this plugin
 bufferline.setup({
   options = {
      
@@ -21,16 +21,6 @@ bufferline.setup({
         text_align = "left",
       },
     },
-    
-    -- diagnostics = "nvim_lsp",
-    -- diagnostics_indicator = function(count, level, diagnostics_dict, context)
-    --   local s = " "
-    --   for e, n in pairs(diagnostics_dict) do
-    --     local sym = e == "error" and " " or (e == "warning" and " " or "")
-    --     s = s .. n .. sym
-    --   end
-    --   return s
-    -- end,
   },
 })
 

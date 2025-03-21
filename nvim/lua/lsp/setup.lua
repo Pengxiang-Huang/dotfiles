@@ -9,8 +9,9 @@ require("mason").setup({
 })
 
 require('mason-lspconfig').setup({
-    ensure_installed = { 'clangd', 'pylsp', 'lua_ls', 'rust_analyzer', 'typos_lsp' },
+    ensure_installed = { 'clangd', 'lua_ls', 'rust_analyzer', 'tinymist', },
 })
+
 
 local lspconfig = require('lspconfig')
 
@@ -26,6 +27,11 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, opts)
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
 local on_attach = function(client, bufnr)
+		-- skip lsp in the terminal mode 
+		if vim.bo[bufnr].buftype == "terminal" then
+        return
+    end
+
     -- Enable completion triggered by <c-x><c-o>
     vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 
@@ -53,7 +59,9 @@ end
 -- Configure each language
 lspconfig.clangd.setup({
 	on_attach = on_attach,
+	capabilities = { offsetEncoding = { "utf-16" } }
 })
+
 
 lspconfig.pylsp.setup({
 	on_attach = on_attach,
@@ -63,8 +71,8 @@ lspconfig.rust_analyzer.setup({
 	on_attach = on_attach,
 })
 
-lspconfig.typos_lsp.setup({
- -- Logging level of the language server. Logs appear in :LspLog. Defaults to error.
-	cmd_env = { RUST_LOG = "error" },
+lspconfig.tinymist.setup({
+	on_attach = on_attach,
 })
+
 

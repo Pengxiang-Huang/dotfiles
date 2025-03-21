@@ -1,7 +1,6 @@
 local cmp = require("cmp")
 
 cmp.setup({
-  -- 指定 snippet 引擎
   snippet = {
     expand = function(args)
       -- For `vsnip` users.
@@ -33,7 +32,6 @@ cmp.setup({
     -- { name = 'snippy' },
   }, { { name = "buffer" }, { name = "path" } }),
 
-  -- 快捷键设置
   mapping = require("keybindings").cmp(cmp),
 })
 

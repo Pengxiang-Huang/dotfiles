@@ -36,12 +36,15 @@ require("lazy").setup {
 	{ "nvim-treesitter/nvim-treesitter" },
 
 	-- buffer
-	{ "akinsho/bufferline.nvim" },
+	{ "akinsho/bufferline.nvim",
+		version = "v1.*",
+		dependencies = 'nvim-tree/nvim-web-devicons'
+	},
+
 	{ "moll/vim-bbye" },
 
 	-- which key 
 	{ "folke/which-key.nvim" },
-
 
 	-- lsp 
 	{ "williamboman/mason.nvim" },
@@ -60,7 +63,6 @@ require("lazy").setup {
 	-- indentation
 	{ "lukas-reineke/indent-blankline.nvim" },
 	
-
 	-- highlighting cursor word 
 	{ "rrethy/vim-illuminate" },
 
@@ -91,11 +93,11 @@ require("lazy").setup {
 	-- dashboard 
 	{ "goolord/alpha-nvim" },
 
-	--- terminal 
+	-- toggle terminal 
 	{'akinsho/toggleterm.nvim',
 		version = "*",
 		config = true 
 	}
-	
+
 }
 

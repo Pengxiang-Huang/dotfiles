@@ -14,10 +14,9 @@ require('colorscheme')
 
 require('file-tree')
 
--- to fancy..
 require('highlight')
 
-require('buffer')
+-- require('buffer')
 
 require('status')
 
@@ -42,5 +41,6 @@ require('pair')
 require('file-fuzzy')
 
 require('dashboard')
+
 -- not used 
 -- require('format')

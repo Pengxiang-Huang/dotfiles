@@ -10,7 +10,7 @@ lualine.setup({
     section_separators = { left = " ", right = "" },
 		theme = 'edge',
   },
-  extensions = { "nvim-tree", "toggleterm" },
+  extensions = { "neo-tree", "toggleterm" },
   sections = {
 		lualine_b = {"branch"},
     lualine_c = {

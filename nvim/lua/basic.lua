@@ -43,7 +43,7 @@ vim.o.incsearch = true
 -- set command line height to 2
 vim.o.cmdheight = 1
 
--- enable mouse at all 
+-- enable mouse at visual and insert mode 
 vim.o.mouse = "vi"
 
 -- set the timeout line to 500 ms
