@@ -79,9 +79,6 @@ map("i", "jj", "<ESC>", opt)
 map("n", "o", "o<ESC>", opt)
 map("n", "O", "O<ESC>", opt)
 
--- redo 
-map("n", "<leader>r", "<C-r>", opt)
-
 -- map the insert char in normal mode 
 map("n", "<leader>a", ":execute 'normal! a' . getcharstr()<CR>", opt)
 
@@ -155,6 +152,30 @@ pluginKeys.cmp = function(cmp)
         ["<C-d>"] = cmp.mapping(cmp.mapping.scroll_docs(4), {"i", "c"}),
     }
 end
+
+function ReplaceGlobally()
+
+		local old_word = vim.fn.expand("<cword>")
+
+    if old_word == "" then
+        print("No text selected.")
+        return
+    end
+
+    -- Prompt user for the new replacement text
+    local new_word = vim.fn.input("Replace " .. old_word .. " with: ")
+
+    if new_word == "" then
+        print("Replacement aborted.")
+        return
+    end
+
+    -- Perform global substitution
+    vim.cmd("%s/\\<" .. vim.pesc(old_word) .. "\\>/" .. vim.pesc(new_word) .. "/g")
+end
+
+-- replace buffer
+map("n", "<leader>rr", ":lua ReplaceGlobally()<CR>", opt)
 
 -- Telescope
 -- find in current folder
