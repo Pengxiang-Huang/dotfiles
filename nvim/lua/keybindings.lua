@@ -161,7 +161,7 @@ end
 map("n", "<leader>ff", ":Telescope find_files<CR>", opt)
 
 -- global search 
-map("n", "<leader>f/", ":Telescope live_grep<CR>", opt)
+map("n", "<leader>fg", ":Telescope live_grep<CR>", opt)
 
 -- find methods/functions/symbols
 map("n", "<leader>fs", ":Telescope lsp_document_symbols<CR>", opt)
