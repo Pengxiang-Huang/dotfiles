@@ -69,3 +69,17 @@ vim.g.clipboard = {
 		['*'] = require('vim.ui.clipboard.osc52').paste('*'),
 	},
 }
+
+-- hide tmux status when open vim
+vim.api.nvim_create_autocmd("VimEnter", {
+  callback = function()
+    vim.fn.system("tmux set-option status off")
+  end
+})
+
+-- show tmux status when exit vim
+vim.api.nvim_create_autocmd("VimLeave", {
+  callback = function()
+    vim.fn.system("tmux set-option status on")
+  end
+})
