@@ -27,7 +27,7 @@ require("lazy").setup {
 	{ "nvim-lualine/lualine.nvim" }, 
 	
 	-- themes
-	{ "ful1e5/onedark.nvim" },
+	{ "navarasu/onedark.nvim" },
   { "sainnhe/edge"},
 	{ "Mofiqul/vscode.nvim"},
 	{ "sainnhe/sonokai" },

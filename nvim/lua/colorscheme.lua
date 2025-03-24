@@ -1,7 +1,7 @@
 vim.o.background = "dark"
 
 -- local colorscheme
-local color = "edge"
+local color = "onedark"
 
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. color)
 
