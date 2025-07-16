@@ -175,7 +175,18 @@ function ReplaceGlobally()
 end
 
 -- replace buffer
-map("n", "<leader>rr", ":lua ReplaceGlobally()<CR>", opt)
+map("n", "<leader>rw", ":lua ReplaceGlobally()<CR>", opt)
+
+-- paste from system clipboard, used inside tmux
+function PasteFromClipboard()
+	local lines = vim.fn.systemlist('pbpaste')
+	if #lines > 0 then
+		vim.api.nvim_put(lines, 'c', true, true)
+	end
+end 
+
+-- used inside tmux 
+map("n", "<leader>p", ":lua PasteFromClipboard()<CR>", opt)
 
 -- Telescope
 -- find in current folder

@@ -13,8 +13,8 @@ tell application "Music"
                 set now_playing to "♫  " & artist_name & " - " & track_name
 
                 -- Truncate long song titles
-                if length of now_playing > 35 then
-                    return text 1 thru 35 of now_playing & "..."
+                if length of now_playing > 45 then
+                    return text 1 thru 45 of now_playing & "..."
                 else
                     return now_playing
                 end if
