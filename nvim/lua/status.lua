@@ -13,20 +13,16 @@ lualine.setup({
   extensions = { "neo-tree", "toggleterm" },
   sections = {
 		lualine_b = {"branch"},
-    lualine_c = {
-      "filename",
-      {
-        "lsp_progress",
-        spinner_symbols = { " ", " ", " ", " ", " ", " " },
-      },
-    },
+		lualine_c = {"searchcount"},
     lualine_x = {
       "filesize",
-      {
-        "fileformat",
-      }, 
 		},
---		lualine_z = { "location" }, 
+		lualine_z = {
+			{
+				"datetime",
+				style = '%I:%M %p',
+			}
+		},
   },
 })
 
