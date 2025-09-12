@@ -15,22 +15,17 @@ require('mason-lspconfig').setup({
 
 local opts = { noremap = true, silent = true }
 
--- Customize LSP diagnostic signs (icons in the sign column)
-local signs = {
-  Error = "✘",  -- or " "
-  Warn  = "▲",  -- or " "
-  Hint  = "⚑",  -- or " "
-  Info  = "",  -- or " "
-}
-
-for type, icon in pairs(signs) do
-  local hl = "DiagnosticSign" .. type
-  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
-end
-
+-- defeine diagnostic sign
 vim.diagnostic.config({
-  -- virtual_text = true,  -- show inline text
-  signs = false,         -- show in sign column
+  virtual_text = true,  -- show inline text
+	signs = {
+    text = {
+      [vim.diagnostic.severity.ERROR] = "✘", -- or " "
+      [vim.diagnostic.severity.WARN]  = " ", -- or "▲ "
+      [vim.diagnostic.severity.HINT]  = "⚑", -- or " "
+      [vim.diagnostic.severity.INFO]  = "", -- or " "
+    },
+	}
 })
 
 -- error handling
