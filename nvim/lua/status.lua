@@ -12,11 +12,12 @@ lualine.setup({
   },
   extensions = { "neo-tree", "toggleterm" },
   sections = {
-		lualine_b = {"branch"},
+		lualine_b = {"filename"},
 		lualine_c = {"searchcount"},
     lualine_x = {
       "filesize",
 		},
+		lualine_y = {"location",},
 		lualine_z = {
 			{
 				"datetime",

@@ -15,7 +15,7 @@ require('mason-lspconfig').setup({
 
 local opts = { noremap = true, silent = true }
 
--- defeine diagnostic sign
+
 vim.diagnostic.config({
   virtual_text = true,  -- show inline text
 	signs = {

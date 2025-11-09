@@ -104,7 +104,7 @@ map("n", "<leader><S-Left>", ":BufferLineCyclePrev<CR>", opt)
 map("n", "<leader><S-Right>", ":BufferLineCycleNext<CR>", opt)
 
 -- close the tab
-map("n", "<leader>ww", ":Bdelete!<CR>", opt)
+-- map("n", "<leader>ww", ":Bdelete!<CR>", opt)
 
 -- close left or right buffer
 -- map("n", "<leader>wh", ":BufferLineCloseLeft<CR>", opt)

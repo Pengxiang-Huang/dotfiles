@@ -7,7 +7,9 @@ end
 -- bufferline, currently has bug in this plugin
 bufferline.setup({
   options = {
-     
+   -- numbers = function(opts)
+   --    return tostring(opts.ordinal)
+   --  end,    
     close_command = "Bdelete! %d",
     right_mouse_command = "Bdelete! %d",
    

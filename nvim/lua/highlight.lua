@@ -6,7 +6,7 @@ end
 
 treesitter.setup({
   -- install language parser
-  ensure_installed = { "cpp", "rust", "vim", "lua"}, 
+  ensure_installed = { "c", "cpp", "rust", "vim", "lua", "llvm"}, 
   
   highlight = {
     enable = true,

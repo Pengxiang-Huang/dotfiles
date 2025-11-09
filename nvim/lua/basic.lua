@@ -35,7 +35,7 @@ vim.api.nvim_command('autocmd! FileType help wincmd L')
 
 -- set the window numbers
 vim.opt.number = true
-vim.opt.relativenumber = false
+vim.opt.relativenumber = true 
 
 -- search while typing
 vim.o.incsearch = true
