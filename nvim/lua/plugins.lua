@@ -33,15 +33,10 @@ require("lazy").setup {
 	{ "sainnhe/sonokai" },
 
 	-- highlighting
-	{ "nvim-treesitter/nvim-treesitter" },
-
-	-- buffer
-	{ "akinsho/bufferline.nvim",
-		version = "v1.*",
-		dependencies = 'nvim-tree/nvim-web-devicons'
+	{ "nvim-treesitter/nvim-treesitter", 
+		lazy = false, 
+		build = ':TSUpdate'
 	},
-
-	{ "moll/vim-bbye" },
 
 	-- which key 
 	{ "folke/which-key.nvim" },
@@ -53,12 +48,9 @@ require("lazy").setup {
 
 	-- auto complete
 	{ "hrsh7th/nvim-cmp" },
-	{ "hrsh7th/vim-vsnip" }, 
-	{ "hrsh7th/cmp-buffer" }, 
-	{ "hrsh7th/cmp-vsnip" },
 	{ "hrsh7th/cmp-nvim-lsp" },
-	{ "hrsh7th/cmp-path" },
 	{ "hrsh7th/cmp-cmdline" },
+	{ "hrsh7th/cmp-buffer" },
 
 	-- indentation
 	{ "lukas-reineke/indent-blankline.nvim" },
@@ -73,17 +65,11 @@ require("lazy").setup {
     },
     lazy = false,
 	},
-
-	-- formatter
-	{ "nvim-lua/plenary.nvim" },
-	{ "jose-elias-alvarez/null-ls.nvim" }, 
-	
-	-- smooth scroll 
-	{ "karb94/neoscroll.nvim" },
 	
 	-- auto pairs
 	{ "windwp/nvim-autopairs" }, 
 	
+	-- auto saves
 	{ "Pocco81/auto-save.nvim" },
 
 	-- fuzzy finder

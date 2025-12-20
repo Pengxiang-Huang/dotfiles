@@ -1,16 +1,8 @@
-local status, treesitter = pcall(require, "nvim-treesitter.configs")
-if not status then
-    vim.notify("not found nvim-treesitter")
-    return
+local ok, ts = pcall(require, "nvim-treesitter")
+if not ok then
+  vim.notify("nvim-treesitter not available on runtimepath", vim.log.levels.WARN)
+  return
 end
 
-treesitter.setup({
-  -- install language parser
-  ensure_installed = { "c", "cpp", "rust", "vim", "lua", "llvm"}, 
-  
-  highlight = {
-    enable = true,
-    additional_vim_regex_highlighting = false,
-  },
-})
-
+-- install the parsers
+ts.install({ "c", "cpp", "cmake", "rust", "vim", "lua", "llvm" })

@@ -1,44 +1,37 @@
 local cmp = require("cmp")
 
 cmp.setup({
-  snippet = {
-    expand = function(args)
-      -- For `vsnip` users.
-      vim.fn["vsnip#anonymous"](args.body)
-
-      -- For `luasnip` users.
-      -- require('luasnip').lsp_expand(args.body)
-
-      -- For `ultisnips` users.
-      -- vim.fn["UltiSnips#Anon"](args.body)
-
-      -- For `snippy` users.
-      -- require'snippy'.expand_snippet(args.body)
-    end,
+  completion = {
+    -- Recommended completion behavior
+    completeopt = "menu,menuone,noinsert",
   },
-  -- sources 
-  sources = cmp.config.sources({
-    { name = "nvim_lsp" },
-    -- For vsnip users.
-    { name = "vsnip" },
 
-    -- For luasnip users.
-    -- { name = 'luasnip' },
+  mapping = cmp.mapping.preset.insert({
+    -- Trigger completion menu
+    ["<C-Space>"] = cmp.mapping.complete(),
 
-    --For ultisnips users.
-    -- { name = 'ultisnips' },
+    -- Close completion
+    ["<C-c>"] = cmp.mapping.abort(),
 
-    -- -- For snippy users.
-    -- { name = 'snippy' },
-  }, { { name = "buffer" }, { name = "path" } }),
+		-- last one 
+		["<Up>"] = cmp.mapping.select_prev_item(),
 
-  mapping = require("keybindings").cmp(cmp),
-})
+		-- next one 
+		["<Down>"] = cmp.mapping.select_next_item(),
 
-cmp.setup.cmdline("/", {
-  mapping = cmp.mapping.preset.cmdline(),
+		-- tab to confirm 
+		["<Tab>"] = cmp.mapping.select_next_item(),
+
+		["<CR>"] = cmp.mapping.confirm({
+				select = true,
+				behavior = cmp.ConfirmBehavior.Replace
+		}),
+
+  }),
+
   sources = {
-    { name = "buffer" },
+    { name = "nvim_lsp" },
+		{ name = "buffer"   },
   },
 })
 
@@ -50,5 +43,3 @@ cmp.setup.cmdline(":", {
     { name = "cmdline" },
   }),
 })
-
-

@@ -16,8 +16,6 @@ require('file-tree')
 
 require('highlight')
 
--- require('buffer')
-
 require('status')
 
 require('whichkey')
@@ -34,13 +32,8 @@ require('save')
 
 require('comment-tool')
 
-require('scroll')
-
 require('pair')
 
 require('file-fuzzy')
 
 require('dashboard')
-
--- not used 
--- require('format')

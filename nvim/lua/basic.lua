@@ -37,6 +37,9 @@ vim.api.nvim_command('autocmd! FileType help wincmd L')
 vim.opt.number = true
 vim.opt.relativenumber = true 
 
+-- windows split
+vim.opt.splitright = true
+
 -- search while typing
 vim.o.incsearch = true
 
