@@ -66,6 +66,7 @@ vim.lsp.config("clangd", {
     "--header-insertion=iwyu",
     "--header-insertion-decorators",
     "--pch-storage=memory",
+		"--compile-commands-dir=build",
   },
 })
 
