@@ -3,7 +3,7 @@ local cmp = require("cmp")
 cmp.setup({
   completion = {
     -- Recommended completion behavior
-    completeopt = "menu,menuone,noinsert",
+    completeopt = "menu,menuone,noinsert,noselect",
   },
 
   mapping = cmp.mapping.preset.insert({
