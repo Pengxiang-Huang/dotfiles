@@ -10,7 +10,7 @@ neotree.setup({
 	close_if_last_window = true,
 	window = {
     position = "left",
-    width = 25,
+    width = 35,
 	},
 	default_component_configs ={
 		git_status = {

@@ -70,12 +70,13 @@ map("n", "sc", "<C-w>c", opt)
 -- close other windows
 map("n", "so", "<C-w>o", opt) 
 
--- <leader> + hjkl to jump between windows
-map("n", "<leader>h", "<C-w>h", opt)
-map("n", "<leader>j", "<C-w>j", opt)
-map("n", "<leader>k", "<C-w>k", opt)
-map("n", "<leader>l", "<C-w>l", opt)
--- <leader> Tab to jump to the next window
+-- Tab + hjkl to jump between windows
+map("n", "<tab>h", "<C-w>h", opt)
+map("n", "<tab>j", "<C-w>j", opt)
+map("n", "<tab>k", "<C-w>k", opt)
+map("n", "<tab>l", "<C-w>l", opt)
+
+-- <leader> + Tab  to jump to the next window
 map("n", "<leader><tab>", "<C-w>w", opt)
 
 -- map the jj to jump back to the normal mode
