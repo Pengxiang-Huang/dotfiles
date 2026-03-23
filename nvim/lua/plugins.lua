@@ -22,10 +22,10 @@ require("lazy").setup {
       "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
       "MunifTanjim/nui.nvim",
     }
-	},	
+	},
 	-- status line
-	{ "nvim-lualine/lualine.nvim" }, 
-	
+	{ "nvim-lualine/lualine.nvim" },
+
 	-- themes
 	{ "navarasu/onedark.nvim" },
   { "sainnhe/edge"},
@@ -33,15 +33,15 @@ require("lazy").setup {
 	{ "sainnhe/sonokai" },
 
 	-- highlighting
-	{ "nvim-treesitter/nvim-treesitter", 
-		lazy = false, 
+	{ "nvim-treesitter/nvim-treesitter",
+		lazy = false,
 		build = ':TSUpdate'
 	},
 
-	-- which key 
+	-- which key
 	{ "folke/which-key.nvim" },
 
-	-- lsp 
+	-- lsp
 	{ "williamboman/mason.nvim" },
 	{ "williamboman/mason-lspconfig.nvim" },
 	{ "neovim/nvim-lspconfig" },
@@ -54,8 +54,8 @@ require("lazy").setup {
 
 	-- indentation
 	{ "lukas-reineke/indent-blankline.nvim" },
-	
-	-- highlighting cursor word 
+
+	-- highlighting cursor word
 	{ "rrethy/vim-illuminate" },
 
 	-- comments
@@ -65,10 +65,10 @@ require("lazy").setup {
     },
     lazy = false,
 	},
-	
+
 	-- auto pairs
-	{ "windwp/nvim-autopairs" }, 
-	
+	{ "windwp/nvim-autopairs" },
+
 	-- auto saves
 	{ "Pocco81/auto-save.nvim" },
 
@@ -76,13 +76,20 @@ require("lazy").setup {
 	{ "nvim-lua/plenary.nvim" },
 	{ "nvim-telescope/telescope.nvim" },
 
-	-- dashboard 
+	-- dashboard
 	{ "goolord/alpha-nvim" },
 
-	-- toggle terminal 
+	-- toggle terminal
 	{'akinsho/toggleterm.nvim',
 		version = "*",
-		config = true 
+		config = true
+	},
+
+	-- boookmark
+	{
+		"chentoast/marks.nvim",
+		event = "VeryLazy",
+		opts = {},
 	}
 
 }

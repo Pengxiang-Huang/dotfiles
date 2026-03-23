@@ -37,3 +37,5 @@ require('pair')
 require('file-fuzzy')
 
 require('dashboard')
+
+require('bookmark')
