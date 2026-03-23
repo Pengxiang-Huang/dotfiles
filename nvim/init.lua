@@ -9,7 +9,7 @@ require('plugins')
 -- keybindings for basic and plugins configurations
 require('keybindings')
 
---- plugins 
+--- plugins
 require('colorscheme')
 
 require('file-tree')

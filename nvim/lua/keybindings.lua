@@ -76,6 +76,9 @@ map("n", "<tab>j", "<C-w>j", opt)
 map("n", "<tab>k", "<C-w>k", opt)
 map("n", "<tab>l", "<C-w>l", opt)
 
+-- map jump newer since its shadowed by <tab>hjkl
+map("n", "<C-n>", "<C-i>", opt)
+
 -- <leader> + Tab  to jump to the next window
 map("n", "<leader><tab>", "<C-w>w", opt)
 
