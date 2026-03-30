@@ -21,8 +21,10 @@ vim.o.errorbells = false
 vim.o.clipboard = 'unnamedplus'
 
 -- set the tab == 2 spaces
+vim.o.expandtab = true
 vim.o.shiftwidth = 2
 vim.o.tabstop = 2
+vim.o.softtabstop = 2
 
 -- disable the wrap line
 vim.wo.wrap = false
