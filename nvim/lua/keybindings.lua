@@ -163,4 +163,11 @@ map("n", "<leader>tt", ":ToggleTerm direction=float<CR>", opt)
 -- map the esc for the terminal 
 map("t", "<ESC>", "<C-\\><C-n>", opt)
 
+-- git changed lines: jump to the next/previous hunk in the buffer
+map("n", "<leader>gn", ":lua require('git-hunk').next()<CR>", opt)
+map("n", "<leader>gp", ":lua require('git-hunk').prev()<CR>", opt)
+
+-- all changed lines of the buffer in the quickfix list
+map("n", "<leader>gl", ":lua require('git-hunk').list()<CR>", opt)
+
 return pluginKeys
