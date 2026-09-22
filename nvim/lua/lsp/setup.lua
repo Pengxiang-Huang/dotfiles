@@ -32,11 +32,7 @@ vim.diagnostic.config({
 local diagnostics_active = true
 vim.keymap.set("n", "<leader>ec", function()
   diagnostics_active = not diagnostics_active
-  if diagnostics_active then
-    vim.diagnostic.enable()
-  else
-    vim.diagnostic.disable()
-  end
+  vim.diagnostic.enable(diagnostics_active)
 end, { noremap = true, silent = true })
 
 vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { noremap = true, silent = true })
@@ -53,11 +49,11 @@ local on_attach = function(_, bufnr)
   vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
 end
 
--- set up clangd 
+-- set up clangd
 vim.lsp.config("clangd", {
   capabilities = capabilities,
 	on_attach = on_attach,
-	-- install clangd first in local env 
+	-- install clangd first in local env
   cmd = {
     "clangd",
     "--background-index",
@@ -74,7 +70,7 @@ vim.lsp.config("clangd", {
 vim.lsp.config("cmake", {
   capabilities = capabilities,
   on_attach = on_attach,
-	-- install cmake first in local env 
+	-- install cmake first in local env
 	cmd = { "cmake-language-server" }
 })
 
